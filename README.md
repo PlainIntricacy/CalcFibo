@@ -1,5 +1,5 @@
 # CalcFibo
-Fibonacci Sequence Web Service (C#) - Fibonacci Sequence generator built with an .ASMX web service.
+Fibonacci Sequence Web Service (C#) - Fibonacci Sequence generator built as an .ASMX web service.
 
 Receives positive integer values as input (0-100), and returns a Fibonacci number sequence of length equal to given input (input 5 => output 0 1 1 2 3).
 
