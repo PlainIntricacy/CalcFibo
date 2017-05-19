@@ -32,7 +32,7 @@ namespace WebApplication1
                 {
                     if (input < 0)
                     {
-                        throw new Exception("Invalid input - Please enter an integer value between 0 and 100.");
+                        throw new Exception("Invalid input - Please enter an integer value between 0 and 33.");
                     }
                     else
                     {
@@ -51,12 +51,12 @@ namespace WebApplication1
                 }
                 else
                 {
-                    ///If the input value is more than 2, verify that it isn't more than 100 or throw an exception error.
+                    ///If the input value is more than 2, verify that it isn't more than 33 or throw an exception error.
                     ///If the input value is valid, being running through the Fibonacci sequence loop to populate the list
                     ///of Fibonacci numbers.
-                    if (input > 100)
+                    if (input > 33)
                     {
-                        throw new Exception("Invalid input - Please enter an integer value between 0 and 100.");
+                        throw new Exception("Invalid input - Please enter an integer value between 0 and 33.");
                     }
                     else
                     {
