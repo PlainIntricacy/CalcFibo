@@ -7,7 +7,8 @@ using System.Web.Services;
 namespace WebApplication1
 {
     /// <summary>
-    /// Summary description for WebService1
+    /// Fibonacci Sequence generator via ASMX Web Service
+    /// Tudor Laptes, 05/18/17
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
@@ -18,11 +19,15 @@ namespace WebApplication1
     {
 
         [WebMethod]
+        //Receive an integer input, and return a list of integers.
         public List<int> CalcFibo(int input)
         {
+            //Initialize list/sequence of Fibonacci numbers.
             List<int> outputList = new List<int>();
             try
             {
+                ///If the input value is less than or equal to 2, verify that it's not less than 0, then
+                ///return a list of [0] or [0,1] depending on the value of the input.
                 if (input <= 2)
                 {
                     if (input < 0)
@@ -46,6 +51,9 @@ namespace WebApplication1
                 }
                 else
                 {
+                    ///If the input value is more than 2, verify that it isn't more than 100 or throw an exception error.
+                    ///If the input value is valid, being running through the Fibonacci sequence loop to populate the list
+                    ///of Fibonacci numbers.
                     if (input > 100)
                     {
                         throw new Exception("Invalid input - Please enter an integer value between 0 and 100.");
@@ -74,21 +82,7 @@ namespace WebApplication1
             {
                 throw new ArgumentException("Error", e);
             }
-            //catch (Exception e)
-            //{
-            //    if (input < 0)
-            //    {
-            //        throw new Exception("Invalid input - please use positive integer values only.", e);
-            //    }
-            //    else
-            //    {
-            //        if (input > 100)
-            //        {
-            //            throw new Exception("Invalid input - please use a value equal or less than 100.", e);
-            //        }
-            //    }
-            //}
             return outputList;
-            }
+        }
     }
 }
